@@ -7,7 +7,7 @@
  * Time: 03.01
  */
 
-define( 'ALHPA_ELEMENDA_VERSION', '1.0.0' );
+define( 'ALPHA_ELEMENDA_VERSION', '1.0.0' );
 @ini_set('display_errors',1);
 @ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -38,6 +38,33 @@ if (!function_exists('alpha_elemenda_theme_setup')){
             )
         );
 
+        register_nav_menus( array(
+            'primary_menu' => __( 'Primary Menu', 'alpha-elemenda' ),
+            'footer_menu'  => __( 'Footer Menu', 'alpha-elemenda' ),
+        ) );
+
+        register_sidebar(array(
+            'name'          => __( 'Main Sidebar ' ) ,
+            'id'            => "main-sidebar",
+            'description'   => '',
+            'class'         => '',
+            'before_widget' => '<li id="%1$s" class="widget %2$s">',
+            'after_widget'  => "</li>\n",
+            'before_title'  => '<h2 class="widgettitle">',
+            'after_title'   => "</h2>\n",
+        ));
+
+
+        // WooCommerce in general.
+        add_theme_support( 'woocommerce' );
+        // Enabling WooCommerce product gallery features (are off by default since WC 3.0.0).
+        // zoom.
+        add_theme_support( 'wc-product-gallery-zoom' );
+        // lightbox.
+        add_theme_support( 'wc-product-gallery-lightbox' );
+        // swipe.
+        add_theme_support( 'wc-product-gallery-slider' );
+
     }
 
 }
@@ -46,12 +73,17 @@ add_action( 'after_setup_theme', 'alpha_elemenda_theme_setup' );
 function alpha_elemenda_enqueue_styles(){
     $min_suffix          = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
     $min_suffix = '';
+    wp_enqueue_style( 'elementor-icons' );
+    wp_enqueue_style( 'elementor-animations' );
+    wp_enqueue_style( 'elementor-frontend' );
     wp_enqueue_style(
         'alpha-elemenda-style',
-        get_template_directory_uri() . '/style' . $min_suffix . '.css',
+        get_template_directory_uri() . '/dist/css/theme.css',
         [],
-        ALHPA_ELEMENDA_VERSION
+        ALPHA_ELEMENDA_VERSION
     );
+
+
 }
 add_action( 'wp_enqueue_scripts', 'alpha_elemenda_enqueue_styles' );
 

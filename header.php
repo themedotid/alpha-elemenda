@@ -13,5 +13,13 @@ exit; // Exit if accessed directly.
    <?php wp_head();?>
 </head>
 <body <?php body_class(); ?>>
-<?php elemenda_body_opening();?>
+<?php elemenda_body_opening();
+
+
+if ( ! function_exists( 'elemenda_theme_do_location' ) || ! elemenda_theme_do_location( 'header' ) ) {
+    get_template_part( 'template-parts/header' );
+}
+?>
+<div class="elemenda elementor">
+
 

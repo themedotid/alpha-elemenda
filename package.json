@@ -1,0 +1,56 @@
+{
+  "name": "alpha-elemenda",
+  "version": "1.0.0",
+  "description": "WordPress Themes For Optimize Your Online Business",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build --prod"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/themedotid/alpha-elemenda.git"
+  },
+  "keywords": [
+    "flexible-header",
+    "custom-colors",
+    "custom-menu",
+    "custom-logo",
+    "featured-images",
+    "rtl-language-support",
+    "threaded-comments",
+    "translation-ready"
+  ],
+  "author": "Hadie Danker",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/themedotid/alpha-elemenda/issues"
+  },
+  "homepage": "https://github.com/themedotid/alpha-elemenda#readme",
+  "devDependencies": {
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/register": "^7.10.5",
+    "autoprefixer": "^9.8.6",
+    "babel-loader": "^8.1.0",
+    "browser-sync": "^2.26.12",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-wp-pot": "^2.4.3",
+    "gulp-zip": "^5.0.2",
+    "vinyl-named": "^1.1.0",
+    "webpack-stream": "^5.2.1",
+    "yargs": "^15.4.1"
+  }
+}

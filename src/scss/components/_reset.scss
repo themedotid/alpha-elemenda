@@ -1,0 +1,252 @@
+html {
+  line-height: 1.15;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 3 */ }
+
+/* Sections
+   ========================================================================== */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333333;
+  background-color: #fff; }
+
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: .5rem;
+  margin-bottom: 1rem;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.2;
+  color: inherit; }
+
+h1 {
+  font-size: 2.5rem; }
+
+h2 {
+  font-size: 2rem; }
+
+h3 {
+  font-size: 1.75rem; }
+
+h4 {
+  font-size: 1.5rem; }
+
+h5 {
+  font-size: 1.25rem; }
+
+h6 {
+  font-size: 1rem; }
+
+p {
+  margin-top: 0;
+  margin-bottom: .9rem; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */
+  white-space: pre-wrap; }
+
+/* Text-level semantics
+   ========================================================================== */
+a {
+  background-color: transparent;
+  text-decoration: none;
+  color: #0066FF; }
+a:hover, a:active {
+  color: #333366; }
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none; }
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none; }
+a:not([href]):not([tabindex]):focus {
+  outline: 0; }
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  -webkit-text-decoration: underline dotted;
+  text-decoration: underline dotted;
+  /* 2 */ }
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+sub {
+  bottom: -0.25em; }
+
+sup {
+  top: -0.5em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+  height: auto;
+  max-width: 100%; }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in Edge, IE 10+, and Firefox.
+ */
+details {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+figcaption {
+  font-size: 16px;
+  color: #333333;
+  line-height: 1.4;
+  font-style: italic;
+  font-weight: 400; }
+
+/* Misc
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10+.
+ */
+template {
+  display: none; }
+
+/**
+ * Add the correct display in IE 10.
+ */
+[hidden] {
+  display: none; }
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0; }
+
+/* Print
+   ========================================================================== */
+@media print {
+  *,
+  *:before,
+  *:after {
+	background: transparent !important;
+	color: #000 !important;
+	/* Black prints faster */
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	text-shadow: none !important; }
+  a,
+  a:visited {
+	text-decoration: underline; }
+  a[href]:after {
+	content: " (" attr(href) ")"; }
+  abbr[title]:after {
+	content: " (" attr(title) ")"; }
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+	content: ""; }
+  pre {
+	white-space: pre-wrap !important; }
+  pre,
+  blockquote {
+	page-break-inside: avoid;
+	border: 1px solid #cccccc; }
+  thead {
+	display: table-header-group; }
+  tr,
+  img {
+	page-break-inside: avoid; }
+  p,
+  h2,
+  h3 {
+	orphans: 3;
+	widows: 3; }
+  h2,
+  h3 {
+	page-break-after: avoid; } }

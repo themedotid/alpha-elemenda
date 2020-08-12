@@ -7,22 +7,32 @@
  * Time: 03.01
  */
 get_header();
-$is_elemenda_theme_exist = false;
+$is_elemenda_theme_exist = function_exists( 'elemenda_theme_do_location' );
 
-if (is_home() || is_front_page()){
-    get_template_part('template-parts/homepage');
-}elseif (is_singular()){
-    get_template_part('template-parts/single');
-} elseif (is_page()) {
-    get_template_part('template-parts/page');
-} elseif (is_archive()) {
-    get_template_part('template-parts/archive');
-}elseif (is_search()){
-    get_template_part('template-parts/search');
-}else{
-    get_template_part('template-parts/404');
+?>
+<main class="site-main" role="main">
+    <?php
+if ( is_singular() ) {
+    if ( ! $is_elemenda_theme_exist || ! elemenda_theme_do_location( 'single' ) ) {
+        get_template_part( 'template-parts/single' );
+    }
+} elseif ( is_archive() || is_home() ) {
+    if ( ! $is_elemenda_theme_exist || ! elemenda_theme_do_location( 'archive' ) ) {
+        get_template_part( 'template-parts/archive' );
+    }
+} elseif ( is_search() ) {
+    if ( ! $is_elemenda_theme_exist || ! elemenda_theme_do_location( 'search' ) ) {
+        get_template_part( 'template-parts/search' );
+    }
+} else {
+    if ( ! $is_elemenda_theme_exist || ! elemenda_theme_do_location( 'single' ) ) {
+        get_template_part( 'template-parts/404' );
+    }
 }
-
+?>
+</main>
+    <?php
+get_sidebar();
 get_footer();
 
 

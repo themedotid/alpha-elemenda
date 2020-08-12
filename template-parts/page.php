@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 while ( have_posts() ) : the_post();
 ?>
-    <main <?php post_class( 'site-main' ); ?> role="main">
+    <article id="post-<?php the_ID();?>" <?php post_class( 'site-content ' ); ?> role="main">
         <?php if ( apply_filters( 'alpha_elemenda_page_title', true ) ) : ?>
             <header class="page-header">
                 <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
@@ -24,6 +24,6 @@ while ( have_posts() ) : the_post();
         </div>
 
         <?php comments_template(); ?>
-    </main>
+    </article>
 <?php
 endwhile;

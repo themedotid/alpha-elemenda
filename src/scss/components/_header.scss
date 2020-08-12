@@ -1,0 +1,76 @@
+/**
+ * DO NOT CHANGE THIS FILE!
+ * To override any of the settings in this section, add your styling code in the custom directory.
+ * Loading first in the style.scss & editor-style.scss
+ */
+/* Basic responsive layout
+   ========================================================================== */
+
+
+/* Header layout
+   ========================================================================== */
+.site-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.site-branding {
+  max-width: 300px;
+	.site-title{
+	  font-size: 2rem;
+	}
+  .site-title,.site-description{
+	margin: 0;
+  }
+}
+
+
+.custom-logo-link {
+  display: block;
+}
+
+
+.site-header, body:not([class*="elementor-page-"]) .site-main {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 575px) {
+  .site-header, body:not([class*="elementor-page-"]) .site-main {
+	padding-right: 10px;
+	padding-left: 10px;
+  }
+}
+
+@media (min-width: 576px) {
+  .site-header, body:not([class*="elementor-page-"]) .site-main {
+	max-width: 500px;
+  }
+}
+
+@media (min-width: 768px) {
+  .site-header, body:not([class*="elementor-page-"]) .site-main {
+	max-width: 600px;
+  }
+}
+
+@media (min-width: 992px) {
+  .site-header, body:not([class*="elementor-page-"]) .site-main {
+	max-width: 800px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .site-header, body:not([class*="elementor-page-"]) .site-main {
+	max-width: 960px;
+  }
+}
