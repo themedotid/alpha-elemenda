@@ -1,0 +1,13 @@
+.elt-navbar,.header-main-inner{
+	background-color: #fff;
+}
+
+
+nav.site-navigation .primary-menu-ul{
+  a{
+	&:hover{
+	  color: var(--primary);
+	}
+  }
+}
+@import "site_nav";

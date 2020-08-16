@@ -1,0 +1,18 @@
+$xl_width: 1200px;
+$desktop_width: 992px;
+$tablet_width: 769px;
+$mobile_width: 576px;
+
+$dark_color: #24292e;
+$link_color: #0366d6;
+
+$default_font_size: 16px;
+$small_font_size: 0.85em;
+
+:root {
+  --dark: #24292e;
+  --dark-smoth: #676767;
+  --white: #fff;
+  --primary: #0366d6;
+  --font-small: 0.85em;
+}

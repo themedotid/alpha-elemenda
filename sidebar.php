@@ -6,7 +6,15 @@
  * Date: 12/08/20
  * Time: 10.21
  */
+
+if (!is_active_sidebar('main-sidebar' )){
+    return;
+}
 ?>
-<div id="sidebar-primary" class="sidebar">
-    <?php dynamic_sidebar( 'main-sidebar' ); ?>
-</div>
+<aside id="sidebar-primary" class="sidebar">
+    <div class="sidebar-inner">
+        <?php
+
+        dynamic_sidebar( 'main-sidebar' ); ?>
+    </div>
+</aside>

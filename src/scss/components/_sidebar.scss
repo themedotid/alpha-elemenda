@@ -1,0 +1,26 @@
+#sidebar-primary{
+  flex:0 0 100%;
+  max-width: 30%;
+  padding-left: 30px;
+  border-left: 1px solid #f0f0f0;
+}
+.widget{
+  word-break: break-word;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  ul{
+
+	margin: 0;
+	padding: 0;
+	> li{
+	  margin-top: 5px;
+	  list-style: none;
+	}
+  }
+}
+
+.widget-title{
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.25em;
+}

@@ -9,8 +9,18 @@
 get_header();
 $is_elemenda_theme_exist = function_exists( 'elemenda_theme_do_location' );
 
-?>
+
+    if ( ! function_exists( 'elemenda_theme_do_location' ) || ! elemenda_theme_do_location( 'header' ) ) {
+    get_template_part( 'template-parts/header' );
+    }
+
+    ?>
+<div class="elemenda site-wrapper  <?php echo is_active_sidebar('main-sidebar' )? 'has-sidebar':'';?>">
+
+
 <main class="site-main" role="main">
+    <div class="container ">
+
     <?php
 if ( is_singular() ) {
     if ( ! $is_elemenda_theme_exist || ! elemenda_theme_do_location( 'single' ) ) {
@@ -29,10 +39,16 @@ if ( is_singular() ) {
         get_template_part( 'template-parts/404' );
     }
 }
+
 ?>
+    <?php get_sidebar();?>
+
+    </div>
 </main>
+</div><!--main-div-->
+
     <?php
-get_sidebar();
+
 get_footer();
 
 

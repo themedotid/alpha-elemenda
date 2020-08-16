@@ -1,0 +1,53 @@
+.search-form, .woocommerce-product-search {
+  position: relative;
+  label{
+	display: inline;
+  }
+  input[type="search"]{
+	width: 100%;
+	padding: 8px 45px 7px 12px;
+  }
+  .search-field {
+	line-height: 1;
+	flex-grow: 1;
+  }
+
+  input[type="submit"]{
+	top: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	color: transparent;
+	background: 0 0;
+	z-index: 2;
+	min-width: 45px;
+	width: 45px;
+	border: 0;
+	padding: 8px 12px 7px;
+	border-radius: 0;
+  }
+  .elt-search-icon-wrap{
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	width: 45px;
+	min-width: 45px;
+	z-index: 3;
+	cursor: pointer;
+	pointer-events: none;
+	color: #c9c9c9;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 0;
+  }
+}
+
+.elt-search{
+  display: flex;
+}
+
+.elt-icon{
+  fill: currentColor;
+}

@@ -48,10 +48,10 @@ if (!function_exists('alpha_elemenda_theme_setup')){
             'id'            => "main-sidebar",
             'description'   => '',
             'class'         => '',
-            'before_widget' => '<li id="%1$s" class="widget %2$s">',
-            'after_widget'  => "</li>\n",
-            'before_title'  => '<h2 class="widgettitle">',
-            'after_title'   => "</h2>\n",
+            'before_widget' => '<div id="%1$s" class="widget %2$s">',
+            'after_widget'  => "</div>",
+            'before_title'  => '<p class="widget-title">',
+            'after_title'   => "</p>",
         ));
 
 
@@ -83,7 +83,7 @@ function alpha_elemenda_enqueue_styles(){
         ALPHA_ELEMENDA_VERSION
     );
 
-
+    wp_enqueue_script('alpha-elemenda',get_template_directory_uri() . '/dist/js/app.js',['jquery'],ALPHA_ELEMENDA_VERSION,true);
 }
 add_action( 'wp_enqueue_scripts', 'alpha_elemenda_enqueue_styles' );
 
@@ -95,3 +95,22 @@ function elemenda_body_opening(){
         do_action( 'wp_body_open' );
     }
 }
+
+
+if (!function_exists('alpha_elemenda_init_loader')){
+    function alpha_elemenda_init_loader(){
+        $vendor_file = trailingslashit( get_template_directory() ) . 'vendor/autoload.php';
+        if ( is_readable( $vendor_file ) ) {
+            require_once $vendor_file;
+        }
+
+        require_once 'autoloader.php';
+        $autoloader = new \AlphaElemenda\Autoloader();
+        $autoloader->add_namespace( 'AlphaElemenda', get_template_directory() . '/includes/' );
+        $autoloader->register();
+
+    }
+    alpha_elemenda_init_loader();
+    \AlphaElemenda\Core::instance();
+}
+

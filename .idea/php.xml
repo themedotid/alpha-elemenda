@@ -3,8 +3,7 @@
   <component name="PhpIncludePathManager">
     <include_path>
       <path value="$PROJECT_DIR$/../../../../wp-asli" />
-      <path value="$PROJECT_DIR$/../../plugins/elemenda" />
-      <path value="$PROJECT_DIR$/../../plugins/elementor" />
     </include_path>
   </component>
+  <component name="PhpProjectSharedConfiguration" php_language_level="7.2" />
 </project>

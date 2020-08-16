@@ -11,30 +11,39 @@ if (!defined('ABSPATH')) {
 }
 ?>
 
-<?php if (apply_filters('hello_elementor_page_title', true)) : ?>
-    <header class="page-header">
+<div class="archive-container  layout-grid">
+<?php if (apply_filters('alpha_elemenda_page_title', true)) : ?>
+    <?php
+    if (!is_home() || !is_front_page()):?>
+     <header class="page-header">
         <?php
+
         the_archive_title('<h1 class="entry-title">', '</h1>');
         the_archive_description('<p class="archive-description">', '</p>');
         ?>
     </header>
 <?php endif; ?>
-<div class="page-content elementor-grid-1">
+<?php endif; ?>
+<div class="post-content elementor-grid-1">
     <div class="elementor-grid">
 
 
         <?php
         while (have_posts()) {
             the_post();
+            global $post;
             $post_link = get_permalink();
             ?>
-            <article id="post-<?php the_ID(); ?>" <?php post_class('site-content elementor-grid-item'); ?> role="main">
+            <div id="post-<?php the_ID(); ?>" <?php post_class('site-content elementor-grid-item'); ?> role="main">
                 <?php
                 printf('<h2 class="%s"><a href="%s">%s</a></h2>', 'entry-title', esc_url($post_link), esc_html(get_the_title()));
-                printf('<a href="%s">%s</a>', esc_url($post_link), get_the_post_thumbnail($post, 'large'));
-                the_excerpt();
+                if(has_post_thumbnail($post)){
+                    printf('<a href="%s">%s</a>', esc_url($post_link), get_the_post_thumbnail($post, 'large'));
+                }
+                do_action('alpha_elemenda_post_meta');
+                printf('<div cass="post-excerpt">%s</div>',get_the_excerpt($post));
                 ?>
-            </article>
+            </div>
         <?php } ?>
     </div>
 </div>
@@ -53,3 +62,4 @@ if ($wp_query->max_num_pages > 1) :
     </nav>
 <?php endif; ?>
 
+</div>

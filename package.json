@@ -31,8 +31,10 @@
     "@babel/core": "^7.11.1",
     "@babel/preset-env": "^7.11.0",
     "@babel/register": "^7.10.5",
+    "@popperjs/core": "^2.4.4",
     "autoprefixer": "^9.8.6",
     "babel-loader": "^8.1.0",
+    "bootstrap": "^4.5.2",
     "browser-sync": "^2.26.12",
     "del": "^5.1.0",
     "gulp": "^4.0.2",
@@ -49,6 +51,7 @@
     "gulp-uglify": "^3.0.2",
     "gulp-wp-pot": "^2.4.3",
     "gulp-zip": "^5.0.2",
+    "popper.js": "^1.16.1",
     "vinyl-named": "^1.1.0",
     "webpack-stream": "^5.2.1",
     "yargs": "^15.4.1"

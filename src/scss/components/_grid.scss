@@ -1,0 +1,17 @@
+/**
+Row
+ */
+.row{
+  display: flex;
+  align-items: center;
+  position: relative;
+  &.grid{
+	flex-wrap: wrap;
+	margin-right: -15px;
+	margin-left: -15px;
+	.elementor-grid-item{
+	  padding-left: 15px;
+	  padding-right: 15px;
+	}
+  }
+}

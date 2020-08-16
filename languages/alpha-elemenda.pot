@@ -13,30 +13,109 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
+#: functions.php:42
+msgid "Primary Menu"
+msgstr ""
+
+#: functions.php:43
+msgid "Footer Menu"
+msgstr ""
+
+#: page-with-header-footer.php:3
+msgid "Page with Header & Footer"
+msgstr ""
+
+#: page-with-header.php:3
+msgid "Page with Header"
+msgstr ""
+
+#: includes/comments.php:39
+msgid "Comments are closed."
+msgstr ""
+
+#. translators: number of comments
+#: includes/comments.php:57
+msgctxt "comments title"
+msgid "%1$s thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/comments.php:83
+msgid "Comments Navigation"
+msgstr ""
+
+#: includes/comments.php:88
+msgid "Previous"
+msgstr ""
+
+#: includes/comments.php:91
+msgid "Next"
+msgstr ""
+
+#: includes/post_meta.php:100
+msgid "by"
+msgstr ""
+
+#. translators: %s: number of comments
+#: includes/post_meta.php:134
+msgid "%s Comment"
+msgid_plural "%s Comments"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/post_meta.php:148
+msgid "Tags"
+msgstr ""
+
+#: includes/post_meta.php:175
+msgid "read"
+msgstr ""
+
+#: includes/utils.php:24
+msgid "Author"
+msgstr ""
+
+#: includes/utils.php:25
+msgid "Category"
+msgstr ""
+
+#: includes/utils.php:26
+msgid "Date"
+msgstr ""
+
+#: includes/utils.php:27
+msgid "Comments"
+msgstr ""
+
+#: includes/utils.php:28
+msgid "Reading"
+msgstr ""
+
 #. translators: HTML arrow
 #. translators: HTML arrow
-#: template-parts/archive.php:47, template-parts/search.php:45
+#: template-parts/archive.php:59, template-parts/search.php:44
 msgid "%s older"
 msgstr ""
 
 #. translators: HTML arrow
 #. translators: HTML arrow
-#: template-parts/archive.php:49, template-parts/search.php:47
+#: template-parts/archive.php:61, template-parts/search.php:46
 msgid "newer %s"
 msgstr ""
 
-#: template-parts/header.php:24
+#: template-parts/header.php:31
 msgid "Home"
 msgstr ""
 
-#: template-parts/search.php:17
+#: template-parts/search.php:16
 msgid "Search results for: "
 msgstr ""
 
-#: template-parts/search.php:33
+#: template-parts/search.php:32
 msgid "It seems we can't find what you're looking for."
 msgstr ""
 
-#: template-parts/single.php:26
+#: template-parts/single.php:32
 msgid "Tagged "
 msgstr ""

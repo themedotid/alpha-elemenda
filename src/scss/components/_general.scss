@@ -1,0 +1,96 @@
+.site-wrapper{
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  padding-top: 30px;
+  &.has-sidebar{
+
+	.site-main{
+
+	  > .container{
+		display: flex;
+		flex-direction: row;
+		padding-left: 0;
+		padding-right: 0;
+	  }
+	}
+	.single-page-container{
+	  padding-right: 40px;
+	}
+  }
+}
+
+
+.archive-container{
+  padding-top: 30px;
+}
+body > .site-wrapper:not(.et-fb-iframe-ancestor){
+  overflow:hidden;
+}
+
+a.elemenda-skip-link{
+  background-color: var(--dark);
+  color:var(--white);
+  padding: 10px 20px;
+}
+
+.show-on-focus{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin:0;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px);
+  top:0;
+  left: 0;
+}
+
+
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  &-fluid{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+  }
+  &:after{
+	content: "";
+	clear: both;
+  }
+}
+
+
+
+@media (min-width: $mobile_width) {
+  .container {
+	max-width: 100%;
+  }
+}
+
+@media (min-width: $tablet_width) {
+  .container{
+	max-width: 100%;
+  }
+  h1{
+	font-size: 2em;
+  }
+  h2{
+	font-size: 1.75em;
+  }
+}
+
+
+@media (min-width: $desktop_width) {
+  .container{
+	max-width: 960px;
+  }
+}
+@media (min-width: $xl_width) {
+  .container{
+	max-width: 1140px;
+  }
+}

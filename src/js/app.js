@@ -1,1 +1,2 @@
-console.log('w')
+import  "bootstrap/js/src/collapse"
+import  "./components/dropdown"

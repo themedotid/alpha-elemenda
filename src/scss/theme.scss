@@ -1,10 +1,21 @@
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
+
+@import "./variables";
 @import "./components/reset";
+@import "./components/general";
+@import "./components/layout_grid";
 @import "./components/header";
+@import "./components/navbar";
 @import "./components/form";
 @import "./components/wp";
 @import "./components/comment";
 @import "./components/post";
-@import "./components/site_nav";
 @import "./components/grid";
 @import "./components/sidebar";
+@import "./components/table";
+@import "./components/post-tags";
+@import "./components/search_form";
 

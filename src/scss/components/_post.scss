@@ -1,11 +1,83 @@
 
 /* Post Item in Archive
    ========================================================================== */
-.post .wp-post-image {
+header.page-header{
+  padding-bottom: 10px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 20px;
+  h1{
+	line-height: 1.3em;
+	margin-bottom: 0;
+  }
+}
+.site-content{
+
+  .entry-title{
+	a{
+	  &,&:hover{
+		color: var(--dark);
+	  }
+	}
+  }
+}
+.site-content{
+  margin-bottom: 30px;
   width: 100%;
-  max-height: 500px;
-  -o-object-fit: cover;
-  object-fit: cover; }
+  padding-bottom: 30px;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  padding-right: 30px;
+}
+.post {
+  .wp-post-image {
+	width: 100%;
+	max-height: 500px;
+	-o-object-fit: cover;
+	object-fit: cover; }
+
+}
+
+.post-meta-list{
+  width: 100%;
+  list-style: none;
+  padding: 0 0 10px 0;
+
+  li,span{
+	display: inline;
+  }
+  > li{
+	color: var(--dark-smoth);
+	font-size: var(--font-small);
+
+	a{
+	  color: var(--dark-smoth);
+	}
+	&:after{
+	  content: "/";
+	  margin:0 5px;
+	}
+	&:last-child{
+	  &:after{
+		content: "";
+		margin:0;
+	  }
+	}
+  }
+  .meta{
+	&.author{
+	  .photo{
+		width: 20px;
+		height: 20px;
+		border-radius: 50%;
+		transform: translateY(25%);
+	  }
+	  .author-name{
+		margin-left: 3px;
+	  }
+	}
+  }
+}
 @media (max-width: 991px) {
   .post .wp-post-image {
 	max-height: 400px; } }
