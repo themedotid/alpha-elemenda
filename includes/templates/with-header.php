@@ -8,12 +8,7 @@
  * Time: 04.48
  */
 get_header();
-$is_elemenda_theme_exist = function_exists( 'elemenda_theme_do_location' );
 
-
-if ( ! function_exists( 'elemenda_theme_do_location' ) || ! elemenda_theme_do_location( 'header' ) ) {
-    get_template_part( 'template-parts/header' );
-}
 
 ?>
 <main class="site-main" role="main">
@@ -27,4 +22,8 @@ if ( ! function_exists( 'elemenda_theme_do_location' ) || ! elemenda_theme_do_lo
     ?>
 </main>
 <?php
-get_footer();?>
+wp_footer();
+?>
+</body>
+</html>
+

@@ -1,0 +1,11 @@
+{
+    "name": "themedotid/alpha-elemenda",
+    "description": "Theme for Elemenda",
+    "type": "project",
+    "license": "MIT",
+    "require": {},
+    "require-dev": {
+        "wptrt/wpthemereview": "^0.2.1",
+        "dealerdirect/phpcodesniffer-composer-installer": "^0.6"
+    }
+}

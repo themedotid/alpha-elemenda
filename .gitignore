@@ -25,3 +25,9 @@ node_modules/
 *.zip
 /bundled
 
+/vendor
+.composer.json
+/.idea
+.idea/alpha-elemenda.iml
+.idea/php.xml
+composer.lock

@@ -13,6 +13,7 @@ class Core{
     use Post_Meta;
     use Utils;
     use Comments;
+    use Page_templates;
 
     const VERSION = '1.0.0';
 
@@ -22,6 +23,26 @@ class Core{
 
 
     private $customizer;
+
+
+
+
+    /**
+     * Alpha Elemenda Template with Header Only.
+     */
+    const TEMPLATE_HEADER = 'elemenda_template_header';
+
+    /**
+     * Alpha Elemenda Template with Footer Only.
+     */
+    const TEMPLATE_FOOTER = 'elemenda_template_footer';
+    const TEMPLATE_CONTAINED = 'elemenda_template_contained';
+
+    /**
+     *  Alpha Elemenda  Header & Footer template name.
+     */
+    const TEMPLATE_HEADER_FOOTER = 'elemenda_header_footer';
+
 
     /**
      * Holds the instance of this class.
@@ -54,6 +75,7 @@ class Core{
         add_filter( 'comment_form_defaults', array( $this, 'leave_reply_title_tag' ) );
         add_filter( 'get_search_form', array( $this, 'add_search_icon' ), PHP_INT_MAX );
 
+        $this->page_template_init();
     }
 
     /**

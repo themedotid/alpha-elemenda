@@ -91,9 +91,11 @@ pre {
 a {
   cursor: pointer;
   color: var(--primary);
-  text-decoration: none;
+
+  &,&:focus,&:hover{
+	text-decoration: none;
+  }
   &:focus,&:hover{
-	text-decoration: underline;
 	color: var(--primary);
   }
   &:active{

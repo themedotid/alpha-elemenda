@@ -94,7 +94,7 @@ export const watchForChanges = () => {
 const server = browserSync.create();
 export const serve = done => {
     server.init({
-        proxy: "https://demo.test:8890" // put your local website link here
+        proxy: "http://demo.test:8888" // put your local website link here
     });
     done();
 };

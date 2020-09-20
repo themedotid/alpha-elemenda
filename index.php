@@ -10,10 +10,6 @@ get_header();
 $is_elemenda_theme_exist = function_exists( 'elemenda_theme_do_location' );
 
 
-    if ( ! function_exists( 'elemenda_theme_do_location' ) || ! elemenda_theme_do_location( 'header' ) ) {
-    get_template_part( 'template-parts/header' );
-    }
-
     ?>
 <div class="elemenda site-wrapper  <?php echo is_active_sidebar('main-sidebar' )? 'has-sidebar':'';?>">
 
