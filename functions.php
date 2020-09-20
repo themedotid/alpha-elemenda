@@ -8,9 +8,7 @@
  */
 
 define( 'ALPHA_ELEMENDA_VERSION', '1.0.0' );
-@ini_set('display_errors',1);
-@ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+
 
 if (!function_exists('alpha_elemenda_theme_setup')){
     function alpha_elemenda_theme_setup(){

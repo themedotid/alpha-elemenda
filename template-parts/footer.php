@@ -11,5 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 ?>
 <footer id="site-footer" class="site-footer" role="contentinfo">
-	<?php // footer. ?>
+	<div class="container">
+         <?php echo sprintf('<div class="text-center">Copyright %1$s %2$s %3$s</div>'," &copy;",date('Y'),get_bloginfo('name'));?>
+    </div>
 </footer>
