@@ -28,8 +28,5 @@ node_modules/
 /vendor
 .composer.json
 /.idea
-.idea/alpha-elemenda.iml
 .idea/php.xml
 composer.lock
-.idea/alpha-elemenda.iml
-.idea/alpha-elemenda.iml
